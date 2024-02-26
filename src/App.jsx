@@ -5,10 +5,8 @@ import './App.css';
 
 export default function App() {
   const [nameText, setNameText] = useState("");
-  // Access your API key (see "Set up your API key" above)
-  const genAI = new GoogleGenerativeAI("AIzaSyA2vdutgmI6H61Ero8-tAzEQe60OHWb41k");
+  const genAI = new GoogleGenerativeAI(API_KEY);
 
-  // Converts a File object to a GoogleGenerativeAI.Part object.
   async function fileToGenerativePart(file) {
     const base64EncodedDataPromise = new Promise((resolve) => {
       const reader = new FileReader();
